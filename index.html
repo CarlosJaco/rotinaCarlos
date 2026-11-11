@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f1">
+  <meta name="description" content="Organize estudo, trabalho, saúde e os pequenos momentos que fazem seu dia valer a pena.">
+  <title>Ritmo — Sua rotina, no seu ritmo</title>
+  <link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="module" src="/assets/app.js"></script>
+</head>
+<body class="dashboard-page">
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="/" aria-label="Ritmo, início">
+        <img src="/assets/mark.svg" width="38" height="38" alt="">
+        <span>ritmo<span class="brand-dot">.</span></span>
+      </a>
+      <p class="nav-label">SEU ESPAÇO</p>
+      <nav class="side-nav">
+        <a class="side-link is-active" href="/" aria-current="page"><span class="nav-icon">⌂</span>Visão geral</a>
+        <a class="side-link" href="#rotinas"><span class="nav-icon">◷</span>Minhas rotinas</a>
+        <a class="side-link" href="#semana"><span class="nav-icon">▦</span>Minha semana</a>
+      </nav>
+      <p class="nav-label category-nav-label">CATEGORIAS</p>
+      <nav class="side-nav category-links" aria-label="Categorias">
+        <a class="side-link" href="/estudo.html"><span class="nav-dot dot-lilac"></span>Estudo</a>
+        <a class="side-link" href="/trabalho.html"><span class="nav-dot dot-blue"></span>Trabalho</a>
+        <a class="side-link" href="/lazer.html"><span class="nav-dot dot-peach"></span>Lazer</a>
+        <a class="side-link" href="/hobby.html"><span class="nav-dot dot-green"></span>Hobby</a>
+        <a class="side-link" href="/esportes.html"><span class="nav-dot dot-orange"></span>Esportes</a>
+        <a class="side-link" href="/saude.html"><span class="nav-dot dot-rose"></span>Saúde</a>
+      </nav>
+      <div class="sidebar-note">
+        <div class="note-spark">✳</div>
+        <p>Um dia de cada vez.<br><strong>Você está no caminho.</strong></p>
+        <span class="note-path" aria-hidden="true">↗ · · · · ·</span>
+      </div>
+      <div class="sidebar-bottom"><span class="online-dot"></span> Feito para a vida real</div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Meu espaço</span><span class="crumb-slash">/</span><strong>Visão geral</strong></div>
+        <div class="topbar-actions">
+          <label class="search-box" for="routine-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 4.2 4.2"></path></svg><input id="routine-search" type="search" placeholder="Buscar na rotina" aria-label="Buscar rotinas"></label>
+          <button class="profile-button" id="customize-all" type="button" aria-label="Personalizar suas rotinas"><span class="profile-sun">✳</span><span class="profile-text">Seu ritmo</span><span class="profile-caret">⌄</span></button>
+        </div>
+      </header>
+
+      <section class="hero-panel" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span><span data-current-weekday>QUARTA-FEIRA</span>, <span data-current-date>11 NOVEMBRO</span></div>
+          <h1 id="hero-title">Um dia de cada vez.<br><span>No seu ritmo.</span></h1>
+          <p class="hero-description">Seus planos, seus respiros e tudo o que faz sua rotina ser sua.</p>
+          <a class="hero-cta" href="#rotinas">Explorar minhas rotinas <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-art-glow"></div>
+          <div class="float-token token-clock">09:41</div>
+          <div class="float-token token-spark">✳</div>
+          <img src="/manus-storage/async-images/tj2RO1N2tRFWoeV4gGzADf/image-1.webp" alt="" fetchpriority="high">
+          <div class="hero-art-caption"><span class="caption-dot"></span> A cidade é sua. O compasso também.</div>
+        </div>
+        <div class="hero-index" aria-hidden="true">01 <span></span> 06</div>
+      </section>
+
+      <section class="day-strip" id="semana" aria-labelledby="week-heading">
+        <div class="section-heading week-heading">
+          <div><p class="section-kicker">SEU COMPASSO</p><h2 id="week-heading">Esta semana</h2></div>
+          <div class="week-summary"><span class="week-summary-dot"></span><span id="week-summary-text">Sua semana começa com você.</span></div>
+        </div>
+        <div class="week-days" role="group" aria-label="Escolha um dia da semana" id="week-days"></div>
+      </section>
+
+      <section class="today-section" aria-labelledby="today-heading">
+        <div class="section-heading today-heading">
+          <div><p class="section-kicker">PEQUENOS PASSOS, GRANDES DIAS</p><h2 id="today-heading">Seu próximo capítulo</h2></div>
+          <span class="today-date" data-selected-date>QUARTA, 11 NOV</span>
+        </div>
+        <div class="today-track" id="today-track"></div>
+      </section>
+
+      <section class="routines-section" id="rotinas" aria-labelledby="routines-heading">
+        <div class="section-heading routine-heading">
+          <div><p class="section-kicker">DO SEU JEITO</p><h2 id="routines-heading">Um lugar para tudo</h2></div>
+          <button class="text-action" id="customize-shortcut" type="button">Editar minhas rotinas <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="routine-grid" id="routine-grid" aria-live="polite"></div>
+      </section>
+      <footer class="footer"><a class="footer-brand" href="/">ritmo.</a><span>Não precisa ser perfeito para ser seu.</span><a href="#hero-title" class="back-top">Voltar ao topo ↑</a></footer>
+    </main>
+  </div>
+
+  <dialog class="routine-modal" id="routine-modal" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Fechar janela">×</button>
+    <div class="modal-content" id="modal-content"></div>
+  </dialog>
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+</body>
+</html>
